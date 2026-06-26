@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:;" />
+  <meta name="description" content="Portfolio saytı — Bacarıqlar, layihələr və əlaqə məlumatları" />
+  <title>Portfolio — Ad Soyad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVİQASİYA -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Əsas naviqasiya">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Baş səhifəyə qayıt">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menyu aç/bağla" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#about" class="nav-link">Haqqımda</a></li>
+        <li><a href="#skills" class="nav-link">Bacarıqlar</a></li>
+        <li><a href="#projects" class="nav-link">Layihələr</a></li>
+        <li><a href="#contact" class="nav-link">Əlaqə</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="Giriş bölməsi">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Salam, mən</p>
+      <h1 class="hero-name">
+        <span class="name-first">Ad</span>
+        <span class="name-last"> Soyad</span>
+      </h1>
+      <div class="hero-role" aria-label="Peşəm">
+        <span class="role-prefix">&gt;_</span>
+        <span class="role-text" id="roleText"></span>
+        <span class="cursor-blink" aria-hidden="true">|</span>
+      </div>
+      <p class="hero-bio">
+        Rəqəmsal dünyada estetik və funksional həllər yaradan
+        <span class="highlight-green">developer</span> &amp;
+        <span class="highlight-blue">security enthusiast</span>.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Layihələrimə bax</a>
+        <a href="#contact" class="btn btn-outline">Əlaqə saxla</a>
+      </div>
+      <div class="hero-stats" aria-label="Statistikalar">
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">İl təcrübə</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">Layihə</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Müştəri</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="code-filename">profile.py</span>
+        </div>
+        <pre class="code-body"><code><span class="c-keyword">class</span> <span class="c-class">Developer</span>:
+  <span class="c-keyword">def</span> <span class="c-func">__init__</span>(self):
+    self.name    = <span class="c-str">"Ad Soyad"</span>
+    self.role    = <span class="c-str">"Full-Stack Dev"</span>
+    self.passion = <span class="c-str">"Security"</span>
+    self.coffee  = <span class="c-bool">True</span>  <span class="c-comment"># həmişə</span>
+
+  <span class="c-keyword">def</span> <span class="c-func">skills</span>(self):
+    <span class="c-keyword">return</span> [
+      <span class="c-str">"Python"</span>, <span class="c-str">"JavaScript"</span>,
+      <span class="c-str">"Cybersecurity"</span>, <span class="c-str">"Linux"</span>
+    ]</code></pre>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Aşağı dayan</span>
+    </div>
+  </section>
+
+  <!-- HAQQIMDA -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 /</span>
+        <h2 class="section-title" id="about-title">Haqqımda</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="about-image-frame">
+            <div class="about-avatar" aria-label="Profil şəkli">
+              <div class="avatar-initials">AS</div>
+              <div class="avatar-ring"></div>
+              <div class="avatar-ring ring-2"></div>
+            </div>
+          </div>
+          <div class="about-badge">
+            <span class="badge-dot"></span>
+            Aktiv — işə açıq
+          </div>
+        </div>
+        <div class="about-content">
+          <h3 class="about-subtitle">Kiməm mən?</h3>
+          <p class="about-text">
+            Mən texnologiya dünyasına aşiq bir developerəm. Hər gün yeni bir şey öyrənmək,
+            mürəkkəb problemləri sadə həllərlə çözmək mənim üçün bir həvəsdən çox —
+            <span class="highlight-green">həyat tərzidir</span>.
+          </p>
+          <p class="about-text">
+            Kibertəhlükəsizlik sahəsindəki biliklərim vasitəsilə həm güclü, həm də
+            <span class="highlight-blue">təhlükəsiz</span> tətbiqlər inkişaf etdirirəm.
+            Kali Linux, penetration testing və secure coding — bu sahələrdə aktiv çalışıram.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Yer</span>
+              <span class="info-value">Bakı, Azərbaycan</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Dillər</span>
+              <span class="info-value">AZ / EN / RU</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Universitet</span>
+              <span class="info-value">Texniki Universitet</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Fokusum</span>
+              <span class="info-value">Security + Dev</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" aria-label="CV yüklə">
+            CV yüklə &darr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACARIQLAR -->
+  <section class="skills" id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 /</span>
+        <h2 class="section-title" id="skills-title">Bacarıqlar</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card" tabindex="0">
+          <div class="skill-icon skill-icon-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3 class="skill-title">Proqramlaşdırma</h3>
+          <ul class="skill-list" role="list">
+            <li><span class="skill-dot"></span>Python</li>
+            <li><span class="skill-dot"></span>JavaScript / TypeScript</li>
+            <li><span class="skill-dot"></span>PHP</li>
+            <li><span class="skill-dot"></span>C / C++</li>
+            <li><span class="skill-dot"></span>Bash Scripting</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" tabindex="0">
+          <div class="skill-icon skill-icon-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="skill-title">Kibertəhlükəsizlik</h3>
+          <ul class="skill-list" role="list">
+            <li><span class="skill-dot"></span>Penetration Testing</li>
+            <li><span class="skill-dot"></span>Web Application Security</li>
+            <li><span class="skill-dot"></span>Network Security</li>
+            <li><span class="skill-dot"></span>OSINT</li>
+            <li><span class="skill-dot"></span>CTF Competitions</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" tabindex="0">
+          <div class="skill-icon skill-icon-beige" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3 class="skill-title">Web &amp; Framework</h3>
+          <ul class="skill-list" role="list">
+            <li><span class="skill-dot"></span>React / Vue.js</li>
+            <li><span class="skill-dot"></span>Flask / FastAPI</li>
+            <li><span class="skill-dot"></span>Node.js / Express</li>
+            <li><span class="skill-dot"></span>PostgreSQL / MySQL</li>
+            <li><span class="skill-dot"></span>Docker / Linux</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" tabindex="0">
+          <div class="skill-icon skill-icon-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h3 class="skill-title">Alətlər</h3>
+          <ul class="skill-list" role="list">
+            <li><span class="skill-dot"></span>Burp Suite / Metasploit</li>
+            <li><span class="skill-dot"></span>Nmap / Wireshark</li>
+            <li><span class="skill-dot"></span>Git / GitHub</li>
+            <li><span class="skill-dot"></span>VS Code / Vim</li>
+            <li><span class="skill-dot"></span>Kali Linux</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYİHƏLƏR -->
+  <section class="projects" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 /</span>
+        <h2 class="section-title" id="projects-title">Layihələr</h2>
+      </div>
+      <div class="projects-filter" role="group" aria-label="Layihə filtri">
+        <button class="filter-btn active" data-filter="all">Hamısı</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="tool">Tool</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card" data-category="security" tabindex="0">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">🔐</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub kodu" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Canlı bax" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Web Vuln Scanner</h3>
+          <p class="project-desc">Python ilə yazılmış avtomatik web zəiflik skanerı. SQL injection, XSS, IDOR testlərini aparır.</p>
+          <div class="project-tags" aria-label="Texnologiyalar">
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-blue">Security</span>
+            <span class="tag">Requests</span>
+          </div>
+        </article>
+
+        <article class="project-card featured" data-category="web" tabindex="0">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">🌐</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub kodu" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Canlı bax" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <span class="featured-badge">Featured</span>
+          <h3 class="project-name">SecureChat Platform</h3>
+          <p class="project-desc">E2E şifrələnmiş real-time chat tətbiqi. Flask backend, WebSocket, AES-256 şifrələmə.</p>
+          <div class="project-tags" aria-label="Texnologiyalar">
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-blue">WebSocket</span>
+            <span class="tag">AES-256</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="tool" tabindex="0">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">🛠️</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub kodu" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Canlı bax" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">OSINT Toolkit</h3>
+          <p class="project-desc">Açıq mənbə kəşfiyyatı üçün Python alətlər toplusu. Email, domain, IP araşdırma avtomatlaşdırılmışdır.</p>
+          <div class="project-tags" aria-label="Texnologiyalar">
+            <span class="tag tag-green">Python</span>
+            <span class="tag">OSINT</span>
+            <span class="tag tag-blue">CLI</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web" tabindex="0">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">📊</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub kodu" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Canlı bax" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Network Monitor Dashboard</h3>
+          <p class="project-desc">Real-time şəbəkə monitorinq paneli. Flask + Chart.js + WebSocket ilə canlı trafik analizi.</p>
+          <div class="project-tags" aria-label="Texnologiyalar">
+            <span class="tag tag-blue">JavaScript</span>
+            <span class="tag tag-green">Flask</span>
+            <span class="tag">Chart.js</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="security" tabindex="0">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">🔑</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub kodu" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Canlı bax" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Password Audit Tool</h3>
+          <p class="project-desc">Şifrə siyasəti yoxlama və zəif şifrə aşkarlama aləti. NIST standartlarına uyğun.</p>
+          <div class="project-tags" aria-label="Texnologiyalar">
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-blue">Security</span>
+            <span class="tag">NIST</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="tool" tabindex="0">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">⚙️</div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub kodu" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Canlı bax" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Log Analyzer CLI</h3>
+          <p class="project-desc">Server log analiz edən, şübhəli aktivlikləri aşkarlayan Python CLI aləti. Regex + ML əsaslı.</p>
+          <div class="project-tags" aria-label="Texnologiyalar">
+            <span class="tag tag-green">Python</span>
+            <span class="tag">Regex</span>
+            <span class="tag tag-blue">ML</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ƏLAQƏ -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 /</span>
+        <h2 class="section-title" id="contact-title">Əlaqə</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 class="contact-subtitle">Birlikdə bir şey yaradaq</h3>
+          <p class="contact-text">
+            Layihə, əməkdaşlıq və ya sadəcə salam demək istəyirsinizsə —
+            mənimlə əlaqə saxlayın. 24 saat ərzində cavab verirəm.
+          </p>
+          <div class="contact-socials">
+            <a href="mailto:email@example.com" class="social-link" aria-label="Email göndər">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              email@example.com
+            </a>
+            <a href="https://github.com" class="social-link" aria-label="GitHub profili" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              github.com/username
+            </a>
+            <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn profili" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              linkedin.com/in/username
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate aria-label="Mesaj formu">
+          <div class="form-group">
+            <label for="contactName" class="form-label">Ad Soyad</label>
+            <input
+              type="text"
+              id="contactName"
+              name="name"
+              class="form-input"
+              placeholder="Adınızı yazın"
+              autocomplete="name"
+              maxlength="100"
+              required
+              aria-required="true"
+            />
+            <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">Email</label>
+            <input
+              type="email"
+              id="contactEmail"
+              name="email"
+              class="form-input"
+              placeholder="email@nümunə.com"
+              autocomplete="email"
+              maxlength="200"
+              required
+              aria-required="true"
+            />
+            <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage" class="form-label">Mesaj</label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              class="form-input form-textarea"
+              placeholder="Mesajınızı yazın..."
+              maxlength="2000"
+              rows="5"
+              required
+              aria-required="true"
+            ></textarea>
+            <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+            <span class="char-counter" id="charCounter" aria-live="polite">0 / 2000</span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            Mesaj Göndər
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+            Mesajınız göndərildi! Tezliklə cavab verəcəyəm.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copy">
+          &copy; <span id="footerYear"></span> Ad Soyad. Bütün hüquqlar qorunur.
+        </p>
+        <p class="footer-made">
+          Hazırlandı <span class="highlight-green">&lt;/&gt;</span> ilə
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
